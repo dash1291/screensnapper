@@ -1,9 +1,10 @@
 Screensnapper is a python script that takes screenshots and uploads them to picpaste.com automatically for easy and quick sharing.
 
-"""Dependencies
+Dependencies
+------------
 
-BeautifulSoup
-PyGTK
-poster
+- BeautifulSoup
+- PyGTK
+- poster
 
 
