@@ -3,7 +3,8 @@ import re
 import urllib2
 
 from BeautifulSoup import BeautifulSoup
-import gtk.gdk
+import gtk
+import gtk
 from poster.encode import multipart_encode
 from poster.streaminghttp import register_openers
 
@@ -29,3 +30,17 @@ s1 = bs.find(text=re.compile('Picture URL:')).parent
 url = s1.findNextSiblings('td')[0].find('a').string
 print 'Done'
 print 'Paste URL : ' + url
+
+# Show a gtk dialog to display the url
+dialog = gtk.Dialog('Screensnapper', None, gtk.DIALOG_MODAL, ('Fine', gtk.RESPONSE_ACCEPT))
+label = gtk.Label('Screenshot URL')
+tb = gtk.TextBuffer()
+tb.set_text(url)
+tv = gtk.TextView(tb)
+tv.set_editable(False)
+dialog.vbox.pack_start(label)
+dialog.vbox.pack_end(tv)
+label.show()
+tv.show()
+r = dialog.run()
+dialog.destroy()
