@@ -1,4 +1,4 @@
-Screensnapper is a python script that takes screenshots and uploads them to picpaste.com automatically for easy and quick sharing.
+Screensnapper is a Python script that takes screenshots and uploads them to http://picpaste.com automatically for easy and quick sharing.
 
 Dependencies
 ------------
