@@ -4,7 +4,6 @@ import urllib2
 
 from BeautifulSoup import BeautifulSoup
 import gtk
-import gtk
 from poster.encode import multipart_encode
 from poster.streaminghttp import register_openers
 
